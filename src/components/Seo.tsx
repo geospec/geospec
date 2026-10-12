@@ -14,7 +14,7 @@ const ORIGIN = 'https://geospecsolutions.com'; // adjust when domain is live
  * Per-page SEO + Open Graph meta. Render at the top of each page.
  */
 export default function Seo({ title, description, path = '/' }: Props) {
-  const fullTitle = title === SITE_NAME ? title : `${title} — ${SITE_NAME}`;
+  const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
   const url = `${ORIGIN}${path}`;
   const image = `${ORIGIN}/assets/geospec-logo.png`;
 

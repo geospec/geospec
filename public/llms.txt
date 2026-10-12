@@ -1,0 +1,28 @@
+# GeoSpec Solutions
+
+> Geospatial and Earth observation consultancy based in Nairobi, Kenya. We turn satellite data into decision-ready intelligence for governments, agribusinesses and development organisations across Africa.
+
+GeoSpec Solutions combines satellite imagery, spatial data engineering and analytical expertise. Clients include government ministries, development finance institutions, NGOs and conservation bodies, agribusinesses, real estate developers and defence and security organisations. Engagements are tailored, evidence-based and delivered end to end by one team with one accountable lead and a fixed scope. Tagline: Precision intelligence. Decisive action.
+
+## Pages
+
+- [Home](https://geospecsolutions.com/): overview, services, approach, how we work and contact form
+- [Customer mapping](https://geospecsolutions.com/services/customer-mapping): Understand exactly where your customers are, and where they could be. Demand hotspots, sharper territory allocation and underserved markets you have not found yet.
+- [Land evaluation](https://geospecsolutions.com/services/land-evaluation): Rigorous land-suitability assessments integrating soil composition, topography, hydrology and cadastral records, evidence decision-makers need before capital is committed.
+- [Environmental monitoring](https://geospecsolutions.com/services/environmental-monitoring): Continuous, time-series tracking of vegetation, water, deforestation and climate signals, refreshed on a schedule and formatted for ESG, compliance and conservation reporting.
+- [Resource mapping](https://geospecsolutions.com/services/resource-mapping): Spatial delineation of minerals, water, forestry and agricultural zones, extraction feasibility scored, exploration targets ranked, sustainability constraints flagged.
+- [Spatial planning](https://geospecsolutions.com/services/spatial-planning): Evidence-based support for urban and regional planning, zoning, infrastructure, population, land-use change. The spatial evidence base your planners can defend.
+- [High-resolution satellite imagery](https://geospecsolutions.com/services/satellite-imagery): Sub-metre imagery from the world's leading providers, tasking, archival retrieval and time-series compilation, processed to your spec, analysis-ready not raw.
+- [Analysis-ready data](https://geospecsolutions.com/services/analysis-ready-data): Pre-processed, radiometrically corrected, atmospherically calibrated datasets, ready for immediate integration into your analytical workflows. Skip the pipeline.
+- [GEOINT](https://geospecsolutions.com/services/geoint): Geospatial intelligence products integrating imagery, human-geography and signals analysis, structured outputs for situational awareness, threat assessment and operational planning.
+
+## Contact
+
+- Email: geospecsolutions@gmail.com
+- Office: Nairobi, Kenya (by appointment)
+- Response time: within 48 hours, working days (EAT)
+
+## Optional
+
+- [Full site content for AI](https://geospecsolutions.com/llms-full.txt)
+- [Sitemap](https://geospecsolutions.com/sitemap.xml)

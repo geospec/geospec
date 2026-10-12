@@ -1,102 +1,83 @@
 import { Link } from 'react-router-dom';
 import type { ServicePage } from '../types';
 import Button from './Button';
+import { ILLUSTRATIONS } from '../data/illustrations';
 
 /**
- * Service detail page hero. Compact, outcome-led, dark forest background
- * with amber glow. Title splits across two lines: regular weight then
- * italic accent.
+ * Service page hero: breadcrumb, eyebrow, two-line hook, lede, CTAs, a
+ * per-service SVG illustration and three key-figure tiles.
  */
 export default function ServiceHero({ service }: { service: ServicePage }) {
-  return (
-    <section
-      className="relative bg-ink text-paper overflow-hidden border-b border-paper/10"
-      style={{ paddingTop: 148, paddingBottom: 56 }}
-    >
-      <div
-        className="absolute top-[-200px] right-[-200px] w-[640px] h-[640px] rounded-full pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(232,154,28,0.18) 0%, rgba(232,154,28,0) 70%)',
-        }}
-      />
-      <div
-        className="absolute left-0 right-0 bottom-0 h-px pointer-events-none"
-        style={{
-          background:
-            'linear-gradient(90deg, transparent 0%, rgba(232,154,28,0.6) 50%, transparent 100%)',
-        }}
-      />
+  const art = ILLUSTRATIONS[service.slug];
 
-      <div className="mx-auto max-w-wrap px-7 md:px-9 lg:px-14">
-        <nav
-          className="flex gap-2.5 items-center font-mono text-[10px] md:text-[11px] tracking-[0.14em] uppercase text-paper/55 font-medium mb-7 md:mb-9"
-          aria-label="Breadcrumb"
-        >
-          <Link to="/" className="text-paper/55 hover:text-accent no-underline transition-colors">
-            Home
-          </Link>
-          <span className="opacity-40">/</span>
-          <Link
-            to="/#services"
-            className="text-paper/55 hover:text-accent no-underline transition-colors"
-          >
-            Services
-          </Link>
-          <span className="opacity-40">/</span>
-          <span className="text-accent font-semibold">{service.name}</span>
+  return (
+    <section className="bg-background pt-10 pb-20">
+      <div className="container-x">
+        <nav aria-label="Breadcrumb" className="text-sm leading-snug text-muted-foreground">
+          <ol className="list-none m-0 p-0 flex flex-wrap gap-x-2 gap-y-1">
+            <li>
+              <Link to="/" className="text-muted-foreground">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <Link to="/#services" className="text-muted-foreground">
+                Services
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" className="font-medium text-foreground">
+              {service.name}
+            </li>
+          </ol>
         </nav>
 
-        <div className="inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.18em] uppercase text-accent font-semibold mb-5 before:content-[''] before:w-9 before:h-px before:bg-accent before:inline-block">
-          <span className="text-paper/55 font-medium">Service № {service.num}</span> ·{' '}
-          {service.tag}
+        <div className="mt-10 grid gap-x-16 gap-y-12 items-center [grid-template-columns:repeat(auto-fit,minmax(min(460px,100%),1fr))]">
+          <div>
+            <p className="eyebrow">
+              Service {service.num} · {service.tag}
+            </p>
+            <h1
+              className="mt-4 font-bold"
+              style={{
+                fontSize: 'clamp(2rem, 4.2vw, 3.25rem)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.03em',
+              }}
+            >
+              {service.hook[0]} <span className="text-primary">{service.hook[1]}</span>
+            </h1>
+            <p className="mt-6 max-w-[560px] text-lg leading-relaxed text-muted-foreground">
+              {service.lede}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button to="/#contact" large>
+                Request a consultation
+              </Button>
+              <Button to="/#services" variant="outline" large>
+                Back to all services
+              </Button>
+            </div>
+          </div>
+
+          {art && (
+            <figure
+              className="m-0 overflow-hidden rounded-lg border border-border shadow-sm"
+              style={{ background: 'var(--il-bg)' }}
+              dangerouslySetInnerHTML={{ __html: art }}
+            />
+          )}
         </div>
 
-        <h1
-          className="font-sans font-semibold uppercase text-paper m-0 max-w-[1080px] text-balance text-[28px] md:text-[44px] lg:text-[64px]"
-          style={{ lineHeight: 0.98, letterSpacing: '-0.030em' }}
-        >
-          {service.hook[0]}
-          <span
-            className="block font-serif italic font-normal text-accent normal-case text-[24px] md:text-[36px] lg:text-[52px] mt-1.5"
-            style={{ letterSpacing: '-0.020em' }}
-          >
-            {service.hook[1]}
-          </span>
-        </h1>
-
-        <p className="font-sans text-[15px] md:text-[18px] leading-[1.55] text-paper/80 max-w-[780px] mt-7 text-pretty">
-          {service.lede}
-        </p>
-
-        <div className="flex flex-wrap gap-2.5 md:gap-3.5 mt-7 md:mt-9">
-          <Button variant="accent" href="/#contact">
-            Request a Consultation →
-          </Button>
-          <Button
-            variant="ghost"
-            href="/#services"
-            className="!bg-transparent !text-paper !border-paper/55 hover:!bg-paper hover:!text-ink hover:!border-paper"
-          >
-            Back to all services
-          </Button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-10 md:mt-12 pt-6 md:pt-7 border-t border-paper/20 max-w-[780px]">
-          {service.kpi.map(([v, l]) => (
-            <div key={l}>
-              <div
-                className="font-sans font-semibold text-paper uppercase text-[20px] md:text-[26px]"
-                style={{ letterSpacing: '-0.020em', lineHeight: 1 }}
-              >
-                {v}
-              </div>
-              <div className="font-mono text-[10.5px] tracking-[0.14em] uppercase text-paper/55 font-medium mt-2 leading-[1.4]">
-                {l}
-              </div>
+        <dl className="m-0 mt-14 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr))]">
+          {service.kpi.map(([value, label]) => (
+            <div key={label} className="p-4 border border-border rounded-lg bg-card shadow-sm">
+              <dd className="m-0 text-xl font-semibold leading-tight tracking-tight">{value}</dd>
+              <dt className="mt-1 text-sm leading-snug text-muted-foreground">{label}</dt>
             </div>
           ))}
-        </div>
+        </dl>
       </div>
     </section>
   );

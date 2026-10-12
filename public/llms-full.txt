@@ -1,0 +1,363 @@
+# GeoSpec Solutions: full site content
+
+Source: https://geospecsolutions.com. Plain-text summary of every public page for AI systems.
+
+## Company
+
+GeoSpec Solutions is a geospatial intelligence consultancy in Nairobi, Kenya. It provides end-to-end geospatial and Earth observation services to governments, agribusinesses and development organisations across Africa.
+
+Who we serve: government ministries; development finance institutions; NGOs and conservation bodies; agribusinesses; real estate developers; defence and security.
+
+How we work: 1. Brief (tell us what you need to see, where, and the decision it supports). 2. Scope (within 48 hours: scoped proposal, named technical lead, fixed fee). 3. Analyse (imagery and spatial data processed and modelled around your context). 4. Deliver (decision-ready intelligence formatted for the people and systems that will act on it).
+
+Contact: geospecsolutions@gmail.com. Nairobi, Kenya, by appointment. Response within 48 hours.
+
+## Services
+
+### 01. Customer mapping
+
+URL: https://geospecsolutions.com/services/customer-mapping
+
+Category: Commercial Intelligence
+
+Summary: Understand exactly where your customers are, and where they could be. Demand hotspots, sharper territory allocation and underserved markets you have not found yet.
+
+Headline: Stop guessing where demand lives. Start placing it on a map.
+
+Geographic intelligence that turns scattered customer data into a strategic asset, exposing demand hotspots, sharpening territory allocation and revealing markets your competitors have not found yet.
+
+Most commercial teams operate on instinct and last quarter’s spreadsheet. We operate on coordinates. By layering your sales records, demographic data and behavioural signals onto precise spatial geometries, we turn "where" into a competitive advantage, pinpointing where to expand, where to consolidate and where to walk away.
+
+The result is not a dashboard you glance at once and forget. It is an operating system for territory decisions: live demand heatmaps, defensible boundary lines, branch-siting recommendations and the analytical backbone for every "should we?" conversation in the room.
+
+What you receive:
+- Demand heatmaps overlaying customer concentration with addressable market
+- Territory boundary files (Shapefile / KML / GeoJSON) optimised for balanced workloads
+- Branch, agent and service-point siting recommendations with footfall projections
+- Interactive web dashboard, or Esri / QGIS-native files, your team’s choice
+- Executive briefing pack with quantified opportunity sizing
+
+Key facts:
+- 4–8 wk: Typical timeline
+- Tool-agnostic: Output formats
+- CRM-native: Workflow fit
+
+FAQ:
+
+Q: Do we need to share customer PII?
+A: No. We can work from anonymised, aggregated records or your CRM’s geographic fields alone, privacy and compliance are non-negotiable for us.
+
+Q: How long does a typical engagement take?
+A: Most customer-mapping projects run 4–8 weeks end-to-end, including data preparation, modelling and delivery.
+
+Q: Can the output update automatically?
+A: Yes. We can deploy a refresh pipeline that ingests your CRM weekly or monthly and recomputes the maps.
+
+Q: What if our customer data is messy?
+A: We expect that. Address standardisation, geocoding and deduplication are part of the standard scope, not an extra line item.
+
+Q: Will this integrate with our existing tools?
+A: Output formats are tool-agnostic, Esri, QGIS, PowerBI, Tableau, Looker and direct CRM injection are all supported.
+
+### 02. Land evaluation
+
+URL: https://geospecsolutions.com/services/land-evaluation
+
+Category: Capital & Investment Intelligence
+
+Summary: Rigorous land-suitability assessments integrating soil composition, topography, hydrology and cadastral records, evidence decision-makers need before capital is committed.
+
+Headline: Know the land before you buy, lease, or develop.
+
+Rigorous land-suitability assessments that turn parcel-level uncertainty into evidence, so capital decisions are defensible, accelerated and aligned with what the ground actually supports.
+
+Land is the single largest line item in most African investments, and the least understood. Soil, slope, water access, tenure status and infrastructure proximity each shift the economics, and getting any one of them wrong shifts the IRR.
+
+We collapse the entire diligence stack into one decision-grade product. Multi-source satellite analysis, cadastral matching and field-validated ground truth, synthesised into a scorecard your investment committee can sign off on, not a stack of PDFs to interpret.
+
+What you receive:
+- Suitability scorecard across agronomic, infrastructural and regulatory criteria
+- Risk overlay maps, flood, erosion, tenure conflict, encroachment, access
+- Cadastral verification and boundary reconciliation against official records
+- Comparable-parcel benchmarking where relevant data is available
+- Executive summary and investment-committee-ready presentation deck
+
+Key facts:
+- 5–10 d: Single-parcel turnaround
+- Auditor-grade: DD documentation
+- Scales 1:100k: Parcel size range
+
+FAQ:
+
+Q: What size of parcel can you evaluate?
+A: From a single 5-hectare plot to a 500,000-hectare concession, methodology scales without changing.
+
+Q: Do you visit the site?
+A: Field validation is included when the engagement value warrants it. For preliminary screens, satellite-only is often sufficient.
+
+Q: How current is the data?
+A: Satellite imagery is typically less than 60 days old at delivery; cadastral data is matched against the most recent official source available.
+
+Q: Can this support DD for an acquisition?
+A: Yes. Our outputs have been used in agribusiness, real-estate and infrastructure DD processes, documentation is auditor-grade.
+
+Q: How quickly can you turn a parcel around?
+A: Single-parcel screens: 5–10 working days. Portfolio assessments: 4–6 weeks.
+
+### 03. Environmental monitoring
+
+URL: https://geospecsolutions.com/services/environmental-monitoring
+
+Category: ESG, Compliance & Conservation
+
+Summary: Continuous, time-series tracking of vegetation, water, deforestation and climate signals, refreshed on a schedule and formatted for ESG, compliance and conservation reporting.
+
+Headline: Defensible evidence for every reporting cycle.
+
+Continuous, time-series environmental tracking that turns satellite data into compliance documentation, ESG reporting and conservation outcomes, refreshed on a schedule you can plan around.
+
+Regulators, lenders and capital partners are no longer satisfied with annual self-attestation. They want evidence, quantified, geo-referenced, comparable year on year. Building that internally is expensive; outsourcing it to a generalist firm is risky.
+
+We embed environmental monitoring into your operating cadence. Vegetation, water, deforestation, encroachment and climate signals are extracted from multi-spectral and SAR satellite data on a recurring schedule, and delivered as both raw layers and executive-ready summaries. Same dataset, two audiences.
+
+What you receive:
+- Change-detection reports on vegetation, water bodies, deforestation and built-up area
+- Recurring monitoring dashboard, weekly, monthly or quarterly cadence
+- Alert system for anomaly thresholds (e.g. forest-loss events, encroachment, flooding)
+- Audit-grade PDF reports formatted for ESG, IFC PS6 and regulatory submission
+- Historic baselines reaching back to 2015 for long-term trend establishment
+
+Key facts:
+- 10 m²: Min. detectable change
+- 2015→: Historical baseline
+- SAR-capable: Cloud-resilient
+
+FAQ:
+
+Q: What is the smallest change you can detect?
+A: Down to ~10 m² at sub-metre tasking; typical change detection works at 10–30 m using freely available satellites.
+
+Q: How often does the dashboard refresh?
+A: Cadence is set per engagement, weekly, monthly or quarterly are standard. Real-time alerts can run on top.
+
+Q: Does this meet IFC PS6 / TCFD reporting standards?
+A: Yes. Methodology and documentation are aligned with the major sustainability reporting frameworks.
+
+Q: Can we monitor sites we don’t own?
+A: Yes, supply-chain monitoring (e.g. third-party concessions) is a common use case for agribusinesses and lenders.
+
+Q: What if cloud cover blocks the view?
+A: For persistent cloud regions we layer SAR (radar) data, which sees through cloud, methodology adapts to the geography.
+
+### 04. Resource mapping
+
+URL: https://geospecsolutions.com/services/resource-mapping
+
+Category: Strategic Asset Intelligence
+
+Summary: Spatial delineation of minerals, water, forestry and agricultural zones, extraction feasibility scored, exploration targets ranked, sustainability constraints flagged.
+
+Headline: Find what is there. Know what it is worth.
+
+Spatial delineation of natural resources, minerals, water, forestry, agricultural zones, with the precision and rigour strategic planning demands.
+
+Resource decisions move slowly because the information is scattered, dated and rarely comparable. Concessions overlap. Geology reports contradict. Hydrology data lives in three different ministries. The cost of getting it wrong is measured in decades.
+
+We consolidate the picture. Satellite-derived geological, hydrological and ecological signals are fused with available ground data into a single resource portfolio view, extraction feasibility scored, exploration targets ranked, sustainability constraints flagged before they become tomorrow’s lawsuit.
+
+What you receive:
+- Resource distribution maps for the asset class (mineral, water, biomass, agricultural)
+- Extraction feasibility scorecards integrating economic, logistical and regulatory factors
+- Ranked exploration target lists for early-stage opportunity sizing
+- Sustainability constraint overlay, protected areas, community land, watercourses
+- GIS-ready data packages compatible with your existing exploration stack
+
+Key facts:
+- Multi-class: Mineral, water, biomass
+- Regulator-ready: Documentation
+- Constraint-aware: Sustainability flags
+
+FAQ:
+
+Q: What resource types do you cover?
+A: Minerals (surface and shallow subsurface signals), water bodies and groundwater proxies, forestry biomass, agricultural production zones, and protected-ecosystem layers.
+
+Q: Can you replace ground exploration?
+A: No, and we will tell you when ground work is essential. Our role is to focus the ground spend where it has the highest probability of payoff.
+
+Q: How do you handle community / customary land?
+A: We integrate documented customary tenure and community-mapped layers where available, and flag gaps in the public record.
+
+Q: Will the data hold up in licensing applications?
+A: Yes. Documentation, methodology and provenance are formatted to regulatory standards.
+
+### 05. Spatial planning
+
+URL: https://geospecsolutions.com/services/spatial-planning
+
+Category: Public & Urban Intelligence
+
+Summary: Evidence-based support for urban and regional planning, zoning, infrastructure, population, land-use change. The spatial evidence base your planners can defend.
+
+Headline: Plan with evidence ,  not assumptions about your region.
+
+Evidence-based support for urban and regional planning decisions, integrating zoning, infrastructure, population and land-use change into models your stakeholders can defend.
+
+Plans fail when they collide with the territory. Population estimates are stale. Infrastructure inventories are partial. Land-use shifts faster than the master plan refreshes. The result is policy that looks elegant on paper and falls over in execution.
+
+We replace assumptions with measurements. Satellite-derived built-up extent, population modelling, infrastructure mapping and land-use change detection are integrated into a planning evidence base, so the recommendations that get tabled are the ones the data can support, and the ones it cannot are flagged before they become political liabilities.
+
+What you receive:
+- Zoning compliance and conflict analysis against the current plan
+- Infrastructure inventory and accessibility modelling (roads, services, utilities)
+- Gridded population distribution and growth projections
+- Land-use change time-series, 5, 10 and 20-year retrospectives
+- Stakeholder-ready map packs and policy-brief documentation
+
+Key facts:
+- Ward → region: Scales we handle
+- 20-year: Retrospective depth
+- Public-ready: Visual outputs
+
+FAQ:
+
+Q: Do you replace our planning consultants?
+A: No. We provide the spatial evidence base they need. Most of our spatial planning work is delivered as a sub-contract to lead planning firms.
+
+Q: Can outputs be used in public consultation?
+A: Yes, visual deliverables are formatted for both technical review and public-facing presentation.
+
+Q: What scales do you work at?
+A: From a single ward to a multi-county region. Resolution is matched to the decision horizon.
+
+Q: Is local administrative data required?
+A: Helpful but not always essential. Satellite-derived layers can substitute or validate where official records are incomplete.
+
+### 06. High-resolution satellite imagery
+
+URL: https://geospecsolutions.com/services/satellite-imagery
+
+Category: Imagery Acquisition & Processing
+
+Summary: Sub-metre imagery from the world's leading providers, tasking, archival retrieval and time-series compilation, processed to your spec, analysis-ready not raw.
+
+Headline: Sub-metre imagery. Tasked, processed, delivered.
+
+Direct access to the world’s leading satellite providers, handled end-to-end. You define the area of interest, we manage the rest.
+
+Sourcing satellite imagery is a procurement problem disguised as a technical one. Different providers, different licensing terms, different processing requirements, different formats. Most organisations either over-pay through resellers, or burn weeks of internal time learning a market they will not buy from again.
+
+We sit between you and the constellation. Tasking, archival retrieval and time-series compilation are negotiated, processed and delivered to your spec, imagery that is analysis-ready, not raw, at competitive pricing because we know the market and bring scale.
+
+What you receive:
+- Newly-tasked imagery from sub-metre commercial providers
+- Archival pulls from open and commercial archives, processed to consistent specification
+- Time-series stacks aligned, co-registered and cloud-masked
+- Cloud-optimised GeoTIFFs (COGs), JP2 or provider-native formats
+- Licensing handled, you receive imagery cleared for your stated use case
+
+Key facts:
+- 30 cm: Best-available resolution
+- 2–5 d: Tasking turnaround
+- Full archive: Open + commercial
+
+FAQ:
+
+Q: Which providers do you work with?
+A: Maxar (WorldView), Airbus (Pléiades, SPOT), Planet, BlackSky, ICEYE for SAR, plus the full open-data catalogue (Sentinel, Landsat).
+
+Q: What is the highest resolution available?
+A: 30 cm pan-sharpened from Maxar WorldView-3, the highest commercially available outside government channels.
+
+Q: How quickly can imagery be tasked?
+A: For clear-sky regions: 2–5 days. For persistent cloud or high-latitude tasking: longer windows apply.
+
+Q: Can you provide imagery for restricted regions?
+A: Subject to provider licensing terms. We will tell you up-front if a region is restricted.
+
+Q: Do you license imagery for redistribution?
+A: Standard licences cover internal use. Redistribution and publishing licences are negotiable per provider.
+
+### 07. Analysis-ready data
+
+URL: https://geospecsolutions.com/services/analysis-ready-data
+
+Category: Geospatial Data Engineering
+
+Summary: Pre-processed, radiometrically corrected, atmospherically calibrated datasets, ready for immediate integration into your analytical workflows. Skip the pipeline.
+
+Headline: Skip the pipeline. Start with the answer.
+
+Pre-processed, radiometrically corrected and atmospherically calibrated datasets, delivered ready for immediate integration into your analytical workflows.
+
+Raw satellite data is a long way from a useful answer. Atmospheric correction, cloud masking, co-registration, mosaicking, format normalisation, each step is straightforward, and collectively they consume the majority of every in-house geospatial team’s capacity.
+
+We do that work once, on infrastructure built for it, and hand you the output. Your team picks up at "what does it mean?" instead of "how do we process this?", multiplying the value of the analysts you already employ.
+
+What you receive:
+- Atmospherically corrected, cloud-masked, co-registered imagery stacks
+- STAC catalogue access for programmatic discovery and retrieval
+- Cloud-optimised GeoTIFFs (COGs) and zarr packages for cloud-native workflows
+- Time-aligned multi-sensor fusion (e.g. Sentinel-1 + Sentinel-2 stacks)
+- On-premise install or hosted cloud API, whichever your security posture requires
+
+Key facts:
+- Hosted or on-prem: Deployment options
+- STAC-compliant: Discovery standard
+- Multi-sensor: Fusion-ready
+
+FAQ:
+
+Q: What formats do you support?
+A: COG, JP2, Zarr, NetCDF, HDF5, GeoJSON, Shapefile, GeoPackage, standard plus most provider-native formats.
+
+Q: Is this hosted or do we receive files?
+A: Both options are supported. Hosted is faster to start; on-premise suits sensitive workloads.
+
+Q: How does pricing work?
+A: Per area-of-interest and per cadence. We will scope and quote against your specific footprint.
+
+Q: Can you integrate proprietary or government data?
+A: Yes, provided licensing permits. We have processed sensitive geospatial datasets under NDA before.
+
+### 08. GEOINT
+
+URL: https://geospecsolutions.com/services/geoint
+
+Category: Defence, Security & Strategic Operations
+
+Summary: Geospatial intelligence products integrating imagery, human-geography and signals analysis, structured outputs for situational awareness, threat assessment and operational planning.
+
+Headline: Decision-grade intelligence for situations that do not allow guesswork.
+
+Geospatial intelligence products that integrate imagery, human-geography and signals data into structured outputs for situational awareness, threat assessment and operational planning.
+
+GEOINT is not GIS with a serious cover. It is an analytical discipline, fusing imagery, OSINT, human terrain and signals into a coherent picture, structured for the decision the consumer actually has to make. The difference between intelligence and a slide deck is in how the question was framed.
+
+We work with security, defence and strategic-operations clients who need the discipline applied to African operating environments. Engagements are scoped tightly, documented to standard, delivered under NDA, and built around the operational tempo of the consumer, not the comfort of the analyst.
+
+What you receive:
+- Structured intelligence briefs, area study, target package, situation report formats
+- Imagery interpretation and pattern-of-life analysis
+- OSINT fusion (open-source media, social, public records) cross-referenced spatially
+- Threat overlays, route analysis and operational planning support layers
+- NDA-bound delivery, sanitised for downstream classification handling
+
+Key facts:
+- NDA-bound: Every engagement
+- Pan-African: Specialty region
+- On-call: Operational support
+
+FAQ:
+
+Q: Do you hold security clearances?
+A: Discussed under NDA. We work with clients across the security spectrum and align process to their requirements.
+
+Q: How is sensitive data handled?
+A: On-premise or air-gapped delivery is standard. All staff sign NDAs; engagement-specific protocols are agreed up-front.
+
+Q: What regions do you cover?
+A: Pan-African operating environments are our specialty. Other regions on case-by-case.
+
+Q: Can you support live operations?
+A: Yes, we provide on-call analytical support for active engagements, structured around the client’s operational tempo.

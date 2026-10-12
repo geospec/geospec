@@ -33,7 +33,7 @@ describe('SERVICES data integrity', () => {
   });
 
   it('getServiceBySlug returns the right entry and undefined for unknown', () => {
-    expect(getServiceBySlug('customer-mapping')?.name).toBe('Customer Mapping');
+    expect(getServiceBySlug('customer-mapping')?.name).toBe('Customer mapping');
     expect(getServiceBySlug('nonexistent-slug')).toBeUndefined();
   });
 });

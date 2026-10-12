@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-type Variant = 'primary' | 'accent' | 'ghost';
+type Variant = 'default' | 'outline' | 'ghost';
 
 interface BaseProps {
   variant?: Variant;
-  /** Extra Tailwind classes appended to the variant. */
+  /** Large (40px) button. */
+  large?: boolean;
+  /** Extra classes appended to the variant. */
   className?: string;
   children: ReactNode;
 }
@@ -15,35 +17,23 @@ type AnchorProps = BaseProps & ComponentPropsWithoutRef<'a'> & { href: string; t
 type LinkProps = BaseProps & { to: string; href?: never };
 
 /**
- * Shared button — renders as a `<button>`, `<a>` or React Router `<Link>`
- * depending on which prop is supplied. Three variants:
- *   primary  → dark green fill, paper text (default)
- *   accent   → amber fill
- *   ghost    → transparent / outlined
- *
- * The `on-dark` parent context flips ghost+primary to the inverted scheme
- * (see the in-component logic below — variants are explicit, no DOM trick).
+ * Shared button. Renders a `<button>`, `<a>` or React Router `<Link>`
+ * depending on which prop is supplied. Variants follow the design system:
+ *   default  → solid primary (forest green; gold on inverse)
+ *   outline  → bordered, background fill
+ *   ghost    → transparent, accent on hover
  */
 export default function Button(props: ButtonProps | AnchorProps | LinkProps) {
-  const { variant = 'primary', className = '', children, ...rest } = props as BaseProps & {
-    href?: string;
-    to?: string;
-  } & Record<string, unknown>;
+  const {
+    variant = 'default',
+    large = false,
+    className = '',
+    children,
+    ...rest
+  } = props as BaseProps & { href?: string; to?: string } & Record<string, unknown>;
 
-  const base =
-    'inline-flex items-center gap-2.5 px-6 py-[15px] font-sans text-[13.5px] font-medium ' +
-    'tracking-[0.04em] uppercase border cursor-pointer transition-colors duration-150 ' +
-    'no-underline';
+  const cls = `btn btn-${variant}${large ? ' btn-lg' : ''} ${className}`.trim();
 
-  const variants: Record<Variant, string> = {
-    primary: 'bg-ink text-paper border-ink hover:bg-accent hover:border-accent',
-    accent: 'bg-accent text-paper border-accent hover:bg-accent-deep hover:border-accent-deep',
-    ghost: 'bg-transparent text-ink border-ink hover:bg-ink hover:text-paper',
-  };
-
-  const cls = `${base} ${variants[variant]} ${className}`;
-
-  // React Router Link
   if ('to' in rest && rest.to) {
     return (
       <Link to={rest.to as string} className={cls}>
@@ -52,7 +42,6 @@ export default function Button(props: ButtonProps | AnchorProps | LinkProps) {
     );
   }
 
-  // Anchor
   if ('href' in rest && rest.href) {
     return (
       <a {...(rest as ComponentPropsWithoutRef<'a'>)} className={cls}>
@@ -61,7 +50,6 @@ export default function Button(props: ButtonProps | AnchorProps | LinkProps) {
     );
   }
 
-  // Native button
   return (
     <button {...(rest as ComponentPropsWithoutRef<'button'>)} className={cls}>
       {children}

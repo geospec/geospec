@@ -1,68 +1,59 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * Tailwind config — palette + fonts mirror the brand tokens.
- * `ink` = deep forest green (from the GeoSpec logo)
- * `paper` = cream / off-white
- * `accent` = amber (orbit ring + satellite in the logo)
+ * Tailwind config. Colours resolve to the CSS variables defined in
+ * `src/index.css`, so the light/dark theme flips without `dark:` variants.
+ * Design tokens come from the GeoSpec design system (forest green primary,
+ * gold accent for graphics only, Inter).
  */
 const config: Config = {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        ink: {
-          DEFAULT: '#0E3D1A',
-          deep: '#072613',
-          line: 'rgba(14,61,26,0.16)',
-          lineSoft: 'rgba(14,61,26,0.07)',
-          body: 'rgba(14,61,26,0.72)',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
+          hover: 'var(--primary-hover)',
         },
-        paper: {
-          DEFAULT: '#F4EFE3',
-          deep: '#E8E1CE',
-          line: 'rgba(244,239,227,0.20)',
-          lineSoft: 'rgba(244,239,227,0.10)',
-          body: 'rgba(244,239,227,0.72)',
+        secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' },
+        muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' },
+        accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' },
+        border: 'var(--border)',
+        input: 'var(--input)',
+        ring: 'var(--ring)',
+        link: 'var(--link)',
+        eyebrow: 'var(--eyebrow)',
+        success: { DEFAULT: 'var(--success)', subtle: 'var(--success-subtle)' },
+        forest: {
+          50: '#f3f8f2',
+          100: '#e8f1e4',
+          200: '#cee1c7',
+          300: '#a8c99c',
+          600: '#387c26',
+          700: '#336720',
+          800: '#29501b',
+          900: '#1e3715',
+          950: '#101b0b',
         },
-        accent: {
-          DEFAULT: '#E89A1C',
-          deep: '#C57F0F',
-        },
+        gold: { 300: '#f0c36d', 500: '#db8a07' },
       },
       fontFamily: {
-        sans: [
-          '"IBM Plex Sans"',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'system-ui',
-          'sans-serif',
-        ],
-        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
-        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
-      },
-      letterSpacing: {
-        // Used a lot in headlines — match the bespoke values from the prototype
-        tightest: '-0.038em',
-        'tight-30': '-0.030em',
-        'tight-28': '-0.028em',
-        'tight-25': '-0.025em',
-        'tight-18': '-0.018em',
-        'tight-12': '-0.012em',
-        'mono-wide': '0.14em',
-        'mono-wider': '0.18em',
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       maxWidth: {
-        wrap: '1360px',
+        container: '1200px',
       },
-      animation: {
-        blink: 'blink 1.6s infinite',
+      borderRadius: {
+        md: '4px',
+        lg: '6px',
       },
-      keyframes: {
-        blink: {
-          '0%,100%': { opacity: '1' },
-          '50%': { opacity: '0.30' },
-        },
+      boxShadow: {
+        sm: '0 1px 2px rgba(17,31,24,0.06)',
       },
     },
   },

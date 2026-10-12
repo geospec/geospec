@@ -29,7 +29,7 @@ export default function ServiceDetail() {
         description={service.lede}
         path={`/services/${service.slug}`}
       />
-      <Nav mode="solid-dark" />
+      <Nav />
       <ServiceHero service={service} />
       <ServiceBody service={service} />
       <ServiceFaq service={service} />

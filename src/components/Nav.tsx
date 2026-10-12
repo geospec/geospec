@@ -1,70 +1,89 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import Icon from './Icon';
+import { useTheme } from '../hooks/useTheme';
+
+const LINKS: Array<[string, string]> = [
+  ['About', '/#about'],
+  ['Services', '/#services'],
+  ['Why GeoSpec', '/#why'],
+  ['How we work', '/#process'],
+];
 
 /**
- * Top navigation. Floats over the hero (transparent background) and
- * sticks to a solid background once the user scrolls past 80px.
- *
- * Defaults assume the nav is on-dark (hero is dark forest green).
- * The `mode` prop forces a light or dark scheme for pages without a
- * dark hero behind it.
+ * Sticky site header: logo, section links, dark-mode switch, primary CTA.
+ * Collapses to a menu button below 768px.
  */
-export default function Nav({ mode = 'over-dark' }: { mode?: 'over-dark' | 'solid-dark' }) {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    if (mode === 'solid-dark') return undefined;
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [mode]);
-
-  const isSolid = mode === 'solid-dark' || scrolled;
+export default function Nav() {
+  const [open, setOpen] = useState(false);
+  const { dark, toggle } = useTheme();
 
   return (
-    <nav
-      className={[
-        'fixed top-0 left-0 right-0 z-30 transition-colors duration-200',
-        isSolid ? 'bg-ink/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent',
-      ].join(' ')}
-    >
-      <div className="mx-auto max-w-wrap px-7 md:px-9 lg:px-14 flex items-center justify-between h-[72px] md:h-[82px]">
-        <Link to="/" aria-label="GeoSpec Solutions home" className="inline-flex items-center">
+    <header className="sticky top-0 z-50 bg-background border-b border-border">
+      <div className="container-x h-16 flex items-center gap-8">
+        <Link to="/" aria-label="GeoSpec Solutions, home" className="flex items-center no-underline">
           <img
             src="/assets/geospec-logo.png"
             alt="GeoSpec Solutions"
-            className="block h-12 md:h-16 w-auto"
+            className="block h-[52px] w-auto"
           />
         </Link>
 
-        <div className="flex items-center gap-9 font-sans text-[12px] font-medium uppercase tracking-[0.14em]">
-          <Link
-            to="/#services"
-            className="hidden md:inline text-paper/90 hover:text-accent no-underline transition-colors"
-          >
-            Services
-          </Link>
-          <Link
-            to="/#why"
-            className="hidden md:inline text-paper/90 hover:text-accent no-underline transition-colors"
-          >
-            Why GeoSpec
-          </Link>
-          <Link
-            to="/#about"
-            className="hidden md:inline text-paper/90 hover:text-accent no-underline transition-colors"
-          >
-            About
-          </Link>
+        <nav aria-label="Main" className="hidden md:flex gap-1 flex-1">
+          {LINKS.map(([label, to]) => (
+            <Link key={to} to={to} className="nav-link">
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        <button
+          type="button"
+          role="switch"
+          aria-checked={dark}
+          aria-label="Dark mode"
+          onClick={toggle}
+          className="switch ml-auto md:ml-0"
+        >
+          <span className="switch-thumb">
+            <Icon name={dark ? 'moon' : 'sun'} size={14} strokeWidth={2} />
+          </span>
+        </button>
+
+        <Link to="/#contact" className="btn btn-default hidden md:inline-flex -ml-4">
+          Get in touch
+        </Link>
+
+        <button
+          type="button"
+          aria-label="Menu"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+          className="btn btn-ghost md:hidden w-11 h-11 p-0 -ml-4"
+        >
+          <Icon name={open ? 'x' : 'menu'} />
+        </button>
+      </div>
+
+      {open && (
+        <nav
+          aria-label="Main"
+          className="md:hidden flex flex-col gap-1 p-4 border-t border-border bg-background"
+        >
+          {LINKS.map(([label, to]) => (
+            <Link key={to} to={to} className="nav-link h-11" onClick={() => setOpen(false)}>
+              {label}
+            </Link>
+          ))}
           <Link
             to="/#contact"
-            className="inline-flex items-center gap-2 bg-paper text-ink border border-paper px-[18px] py-[11px] text-[11.5px] font-medium tracking-[0.04em] uppercase no-underline hover:bg-accent hover:border-accent hover:text-paper transition-colors"
+            className="btn btn-default btn-lg mt-2"
+            onClick={() => setOpen(false)}
           >
-            Start a Conversation
+            Get in touch
           </Link>
-        </div>
-      </div>
-    </nav>
+        </nav>
+      )}
+    </header>
   );
 }

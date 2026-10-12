@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { SERVICES } from '../data/services';
+import Icon from './Icon';
 
 const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined;
 
@@ -30,7 +31,7 @@ export default function ContactForm() {
     if (!ACCESS_KEY || ACCESS_KEY === 'replace_with_your_web3forms_key') {
       setStatus({
         state: 'error',
-        msg: 'Form not yet wired — set VITE_WEB3FORMS_ACCESS_KEY in .env.local.',
+        msg: 'The form is not connected yet. Set VITE_WEB3FORMS_ACCESS_KEY in .env.local.',
       });
       return;
     }
@@ -51,7 +52,7 @@ export default function ContactForm() {
       if (json.success) {
         setStatus({
           state: 'success',
-          msg: 'Brief received — we will reply within one working day.',
+          msg: 'We will be in touch shortly.',
         });
         form.reset();
       } else {
@@ -65,28 +66,22 @@ export default function ContactForm() {
     } catch {
       setStatus({
         state: 'error',
-        msg: 'Network error. Please email us directly at geospecsolutions@gmail.com.',
+        msg: 'A network error occurred. Please email us directly at geospecsolutions@gmail.com.',
       });
     }
   }
+
+  const busy = status.state === 'loading';
 
   return (
     <form
       ref={formRef}
       onSubmit={onSubmit}
-      className="bg-ink text-paper border border-ink p-7 md:p-10 flex flex-col gap-5"
+      className="p-8 border border-border rounded-lg"
     >
-      <h3
-        className="font-sans text-[20px] md:text-[22px] font-semibold uppercase text-paper m-0"
-        style={{ letterSpacing: '-0.015em' }}
-      >
-        Brief us on the project
-      </h3>
-      <p className="font-sans text-[14px] text-paper/65 leading-[1.55] m-0 -mt-2">
-        An analyst reads every brief and responds within 48 hours.
-      </p>
+      <h3 className="text-xl font-semibold leading-snug">Send us a brief</h3>
 
-      {/* Honeypot — hidden field, real users will leave blank */}
+      {/* Honeypot: hidden field, real users leave it blank */}
       <input
         type="checkbox"
         name="botcheck"
@@ -95,93 +90,96 @@ export default function ContactForm() {
         autoComplete="off"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-        <Field label="Name" name="name" type="text" placeholder="Full name" required />
-        <Field label="Organisation" name="organisation" type="text" placeholder="Company / agency" />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-        <Field label="Email" name="email" type="email" placeholder="name@org.com" required />
-        <Field label="Phone" name="phone" type="tel" placeholder="+254 …" />
-      </div>
-
-      <div className="flex flex-col gap-2">
-        <label className="font-mono text-[10.5px] tracking-[0.14em] uppercase text-paper/65 font-medium">
-          Service of interest
-        </label>
-        <select
-          name="service"
-          defaultValue=""
-          className="font-sans text-[14.5px] text-paper bg-paper/5 border border-paper/20 px-3.5 py-3 outline-none focus:border-accent focus:bg-paper/10 transition-colors"
-        >
-          <option value="" disabled>
-            Select a service…
-          </option>
-          {SERVICES.map((s) => (
-            <option key={s.slug}>{s.name}</option>
-          ))}
-          <option>Other / not sure</option>
-        </select>
-      </div>
-
-      <div className="flex flex-col gap-2">
-        <label className="font-mono text-[10.5px] tracking-[0.14em] uppercase text-paper/65 font-medium">
-          Tell us about the challenge
-        </label>
-        <textarea
-          name="message"
-          rows={4}
-          required
-          placeholder="Area of interest, target outcomes, indicative timeline…"
-          className="font-sans text-[14.5px] text-paper bg-paper/5 border border-paper/20 px-3.5 py-3 outline-none focus:border-accent focus:bg-paper/10 transition-colors placeholder:text-paper/40 resize-y"
-        />
-      </div>
-
-      <button
-        type="submit"
-        disabled={status.state === 'loading'}
-        className="inline-flex items-center justify-center gap-2 px-6 py-[15px] bg-accent border border-accent text-paper font-sans text-[13.5px] font-medium tracking-[0.04em] uppercase cursor-pointer transition-colors hover:bg-paper hover:text-ink hover:border-paper disabled:opacity-65 disabled:cursor-wait self-start"
-      >
-        {status.state === 'loading' ? 'Sending…' : 'Submit brief →'}
-      </button>
-
-      {status.state !== 'idle' && status.state !== 'loading' && (
-        <div
-          role="status"
-          aria-live="polite"
-          className={[
-            'mt-1 px-4 py-3.5 font-mono text-[11.5px] tracking-[0.06em] uppercase font-medium leading-[1.5] border text-pretty',
-            status.state === 'success'
-              ? 'border-accent text-accent bg-accent/10'
-              : 'border-paper/35 text-paper/85 bg-paper/5',
-          ].join(' ')}
-        >
-          {status.msg}
+      <div className="mt-6 flex flex-col gap-6">
+        <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr))]">
+          <Field id="f-name" label="Name" name="name" type="text" placeholder="Full name" autoComplete="name" required />
+          <Field id="f-org" label="Organisation" name="organisation" type="text" placeholder="Company or agency" autoComplete="organization" />
         </div>
-      )}
+        <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr))]">
+          <Field id="f-email" label="Email" name="email" type="email" placeholder="name@org.com" autoComplete="email" required />
+          <Field id="f-phone" label="Phone" name="phone" type="tel" placeholder="+254" autoComplete="tel" />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label htmlFor="f-service" className="text-sm leading-snug font-medium">
+            Service of interest
+          </label>
+          <select id="f-service" name="service" defaultValue="" className="field">
+            <option value="">Select a service</option>
+            {SERVICES.map((s) => (
+              <option key={s.slug}>{s.name}</option>
+            ))}
+            <option>Other / not sure</option>
+          </select>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label htmlFor="f-message" className="text-sm leading-snug font-medium">
+            Message
+          </label>
+          <textarea
+            id="f-message"
+            name="message"
+            rows={4}
+            required
+            placeholder="Area of interest, target outcomes, indicative timeline"
+            className="field"
+          />
+        </div>
+
+        <button type="submit" disabled={busy} className="btn btn-default btn-lg w-full">
+          {busy ? 'Sending' : 'Submit brief'}
+        </button>
+
+        {status.state === 'success' && (
+          <div
+            role="status"
+            className="flex gap-3 items-start p-4 bg-success-subtle border border-border rounded-lg"
+          >
+            <Icon name="check" className="flex-none mt-0.5 text-success" />
+            <div>
+              <p className="text-sm leading-snug font-semibold text-success">Brief received</p>
+              <p className="mt-0.5 text-sm leading-normal text-muted-foreground">{status.msg}</p>
+            </div>
+          </div>
+        )}
+        {status.state === 'error' && (
+          <div
+            role="alert"
+            className="p-4 border border-border rounded-lg text-sm leading-normal text-foreground"
+          >
+            {status.msg}
+          </div>
+        )}
+      </div>
     </form>
   );
 }
 
 interface FieldProps {
+  id: string;
   label: string;
   name: string;
   type: 'text' | 'email' | 'tel';
   placeholder?: string;
+  autoComplete?: string;
   required?: boolean;
 }
 
-function Field({ label, name, type, placeholder, required }: FieldProps) {
+function Field({ id, label, name, type, placeholder, autoComplete, required }: FieldProps) {
   return (
     <div className="flex flex-col gap-2">
-      <label className="font-mono text-[10.5px] tracking-[0.14em] uppercase text-paper/65 font-medium">
+      <label htmlFor={id} className="text-sm leading-snug font-medium">
         {label}
       </label>
       <input
+        id={id}
         type={type}
         name={name}
         placeholder={placeholder}
+        autoComplete={autoComplete}
         required={required}
-        className="font-sans text-[14.5px] text-paper bg-paper/5 border border-paper/20 px-3.5 py-3 outline-none focus:border-accent focus:bg-paper/10 transition-colors placeholder:text-paper/40"
+        className="field"
       />
     </div>
   );

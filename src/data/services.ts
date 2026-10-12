@@ -8,27 +8,27 @@ export const SERVICES: ServicePage[] = [
   {
     num: '01',
     slug: 'customer-mapping',
-    name: 'Customer Mapping',
-    tag: 'Commercial Intelligence',
+    name: 'Customer mapping',
+    tag: 'Commercial intelligence',
     summary:
-      'Understand exactly where your customers are — and where they could be. Demand hotspots, sharper territory allocation and underserved markets you have not found yet.',
+      'Understand exactly where your customers are, and where they could be. Demand hotspots, sharper territory allocation and underserved markets you have not found yet.',
     hook: ['Stop guessing where demand lives.', 'Start placing it on a map.'],
-    lede: 'Geographic intelligence that turns scattered customer data into a strategic asset — exposing demand hotspots, sharpening territory allocation and revealing markets your competitors have not found yet.',
+    lede: 'Geographic intelligence that turns scattered customer data into a strategic asset, exposing demand hotspots, sharpening territory allocation and revealing markets your competitors have not found yet.',
     prose: [
-      'Most commercial teams operate on instinct and last quarter’s spreadsheet. We operate on coordinates. By layering your sales records, demographic data and behavioural signals onto precise spatial geometries, we turn "where" into a competitive advantage — pinpointing where to expand, where to consolidate and where to walk away.',
+      'Most commercial teams operate on instinct and last quarter’s spreadsheet. We operate on coordinates. By layering your sales records, demographic data and behavioural signals onto precise spatial geometries, we turn "where" into a competitive advantage, pinpointing where to expand, where to consolidate and where to walk away.',
       'The result is not a dashboard you glance at once and forget. It is an operating system for territory decisions: live demand heatmaps, defensible boundary lines, branch-siting recommendations and the analytical backbone for every "should we?" conversation in the room.',
     ],
     delivers: [
       'Demand heatmaps overlaying customer concentration with addressable market',
       'Territory boundary files (Shapefile / KML / GeoJSON) optimised for balanced workloads',
       'Branch, agent and service-point siting recommendations with footfall projections',
-      'Interactive web dashboard, or Esri / QGIS-native files — your team’s choice',
+      'Interactive web dashboard, or Esri / QGIS-native files, your team’s choice',
       'Executive briefing pack with quantified opportunity sizing',
     ],
     faq: [
       [
         'Do we need to share customer PII?',
-        'No. We can work from anonymised, aggregated records or your CRM’s geographic fields alone — privacy and compliance are non-negotiable for us.',
+        'No. We can work from anonymised, aggregated records or your CRM’s geographic fields alone, privacy and compliance are non-negotiable for us.',
       ],
       [
         'How long does a typical engagement take?',
@@ -44,7 +44,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'Will this integrate with our existing tools?',
-        'Output formats are tool-agnostic — Esri, QGIS, PowerBI, Tableau, Looker and direct CRM injection are all supported.',
+        'Output formats are tool-agnostic, Esri, QGIS, PowerBI, Tableau, Looker and direct CRM injection are all supported.',
       ],
     ],
     kpi: [
@@ -56,19 +56,19 @@ export const SERVICES: ServicePage[] = [
   {
     num: '02',
     slug: 'land-evaluation',
-    name: 'Land Evaluation',
-    tag: 'Capital & Investment Intelligence',
+    name: 'Land evaluation',
+    tag: 'Capital and investment intelligence',
     summary:
-      'Rigorous land-suitability assessments integrating soil composition, topography, hydrology and cadastral records — evidence decision-makers need before capital is committed.',
+      'Rigorous land-suitability assessments integrating soil composition, topography, hydrology and cadastral records, evidence decision-makers need before capital is committed.',
     hook: ['Know the land before you', 'buy, lease, or develop.'],
-    lede: 'Rigorous land-suitability assessments that turn parcel-level uncertainty into evidence — so capital decisions are defensible, accelerated and aligned with what the ground actually supports.',
+    lede: 'Rigorous land-suitability assessments that turn parcel-level uncertainty into evidence, so capital decisions are defensible, accelerated and aligned with what the ground actually supports.',
     prose: [
-      'Land is the single largest line item in most African investments — and the least understood. Soil, slope, water access, tenure status and infrastructure proximity each shift the economics, and getting any one of them wrong shifts the IRR.',
-      'We collapse the entire diligence stack into one decision-grade product. Multi-source satellite analysis, cadastral matching and field-validated ground truth — synthesised into a scorecard your investment committee can sign off on, not a stack of PDFs to interpret.',
+      'Land is the single largest line item in most African investments, and the least understood. Soil, slope, water access, tenure status and infrastructure proximity each shift the economics, and getting any one of them wrong shifts the IRR.',
+      'We collapse the entire diligence stack into one decision-grade product. Multi-source satellite analysis, cadastral matching and field-validated ground truth, synthesised into a scorecard your investment committee can sign off on, not a stack of PDFs to interpret.',
     ],
     delivers: [
       'Suitability scorecard across agronomic, infrastructural and regulatory criteria',
-      'Risk overlay maps — flood, erosion, tenure conflict, encroachment, access',
+      'Risk overlay maps, flood, erosion, tenure conflict, encroachment, access',
       'Cadastral verification and boundary reconciliation against official records',
       'Comparable-parcel benchmarking where relevant data is available',
       'Executive summary and investment-committee-ready presentation deck',
@@ -76,7 +76,7 @@ export const SERVICES: ServicePage[] = [
     faq: [
       [
         'What size of parcel can you evaluate?',
-        'From a single 5-hectare plot to a 500,000-hectare concession — methodology scales without changing.',
+        'From a single 5-hectare plot to a 500,000-hectare concession, methodology scales without changing.',
       ],
       [
         'Do you visit the site?',
@@ -88,7 +88,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'Can this support DD for an acquisition?',
-        'Yes. Our outputs have been used in agribusiness, real-estate and infrastructure DD processes — documentation is auditor-grade.',
+        'Yes. Our outputs have been used in agribusiness, real-estate and infrastructure DD processes, documentation is auditor-grade.',
       ],
       [
         'How quickly can you turn a parcel around?',
@@ -104,19 +104,19 @@ export const SERVICES: ServicePage[] = [
   {
     num: '03',
     slug: 'environmental-monitoring',
-    name: 'Environmental Monitoring',
-    tag: 'ESG, Compliance & Conservation',
+    name: 'Environmental monitoring',
+    tag: 'ESG, compliance and conservation',
     summary:
-      'Continuous, time-series tracking of vegetation, water, deforestation and climate signals — refreshed on a schedule and formatted for ESG, compliance and conservation reporting.',
+      'Continuous, time-series tracking of vegetation, water, deforestation and climate signals, refreshed on a schedule and formatted for ESG, compliance and conservation reporting.',
     hook: ['Defensible evidence', 'for every reporting cycle.'],
-    lede: 'Continuous, time-series environmental tracking that turns satellite data into compliance documentation, ESG reporting and conservation outcomes — refreshed on a schedule you can plan around.',
+    lede: 'Continuous, time-series environmental tracking that turns satellite data into compliance documentation, ESG reporting and conservation outcomes, refreshed on a schedule you can plan around.',
     prose: [
-      'Regulators, lenders and capital partners are no longer satisfied with annual self-attestation. They want evidence — quantified, geo-referenced, comparable year on year. Building that internally is expensive; outsourcing it to a generalist firm is risky.',
+      'Regulators, lenders and capital partners are no longer satisfied with annual self-attestation. They want evidence, quantified, geo-referenced, comparable year on year. Building that internally is expensive; outsourcing it to a generalist firm is risky.',
       'We embed environmental monitoring into your operating cadence. Vegetation, water, deforestation, encroachment and climate signals are extracted from multi-spectral and SAR satellite data on a recurring schedule, and delivered as both raw layers and executive-ready summaries. Same dataset, two audiences.',
     ],
     delivers: [
       'Change-detection reports on vegetation, water bodies, deforestation and built-up area',
-      'Recurring monitoring dashboard — weekly, monthly or quarterly cadence',
+      'Recurring monitoring dashboard, weekly, monthly or quarterly cadence',
       'Alert system for anomaly thresholds (e.g. forest-loss events, encroachment, flooding)',
       'Audit-grade PDF reports formatted for ESG, IFC PS6 and regulatory submission',
       'Historic baselines reaching back to 2015 for long-term trend establishment',
@@ -128,7 +128,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'How often does the dashboard refresh?',
-        'Cadence is set per engagement — weekly, monthly or quarterly are standard. Real-time alerts can run on top.',
+        'Cadence is set per engagement, weekly, monthly or quarterly are standard. Real-time alerts can run on top.',
       ],
       [
         'Does this meet IFC PS6 / TCFD reporting standards?',
@@ -136,11 +136,11 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'Can we monitor sites we don’t own?',
-        'Yes — supply-chain monitoring (e.g. third-party concessions) is a common use case for agribusinesses and lenders.',
+        'Yes, supply-chain monitoring (e.g. third-party concessions) is a common use case for agribusinesses and lenders.',
       ],
       [
         'What if cloud cover blocks the view?',
-        'For persistent cloud regions we layer SAR (radar) data, which sees through cloud — methodology adapts to the geography.',
+        'For persistent cloud regions we layer SAR (radar) data, which sees through cloud, methodology adapts to the geography.',
       ],
     ],
     kpi: [
@@ -152,21 +152,21 @@ export const SERVICES: ServicePage[] = [
   {
     num: '04',
     slug: 'resource-mapping',
-    name: 'Resource Mapping',
-    tag: 'Strategic Asset Intelligence',
+    name: 'Resource mapping',
+    tag: 'Strategic asset intelligence',
     summary:
-      'Spatial delineation of minerals, water, forestry and agricultural zones — extraction feasibility scored, exploration targets ranked, sustainability constraints flagged.',
+      'Spatial delineation of minerals, water, forestry and agricultural zones, extraction feasibility scored, exploration targets ranked, sustainability constraints flagged.',
     hook: ['Find what is there.', 'Know what it is worth.'],
-    lede: 'Spatial delineation of natural resources — minerals, water, forestry, agricultural zones — with the precision and rigour strategic planning demands.',
+    lede: 'Spatial delineation of natural resources, minerals, water, forestry, agricultural zones, with the precision and rigour strategic planning demands.',
     prose: [
       'Resource decisions move slowly because the information is scattered, dated and rarely comparable. Concessions overlap. Geology reports contradict. Hydrology data lives in three different ministries. The cost of getting it wrong is measured in decades.',
-      'We consolidate the picture. Satellite-derived geological, hydrological and ecological signals are fused with available ground data into a single resource portfolio view — extraction feasibility scored, exploration targets ranked, sustainability constraints flagged before they become tomorrow’s lawsuit.',
+      'We consolidate the picture. Satellite-derived geological, hydrological and ecological signals are fused with available ground data into a single resource portfolio view, extraction feasibility scored, exploration targets ranked, sustainability constraints flagged before they become tomorrow’s lawsuit.',
     ],
     delivers: [
       'Resource distribution maps for the asset class (mineral, water, biomass, agricultural)',
       'Extraction feasibility scorecards integrating economic, logistical and regulatory factors',
       'Ranked exploration target lists for early-stage opportunity sizing',
-      'Sustainability constraint overlay — protected areas, community land, watercourses',
+      'Sustainability constraint overlay, protected areas, community land, watercourses',
       'GIS-ready data packages compatible with your existing exploration stack',
     ],
     faq: [
@@ -176,7 +176,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'Can you replace ground exploration?',
-        'No — and we will tell you when ground work is essential. Our role is to focus the ground spend where it has the highest probability of payoff.',
+        'No, and we will tell you when ground work is essential. Our role is to focus the ground spend where it has the highest probability of payoff.',
       ],
       [
         'How do you handle community / customary land?',
@@ -196,21 +196,21 @@ export const SERVICES: ServicePage[] = [
   {
     num: '05',
     slug: 'spatial-planning',
-    name: 'Spatial Planning',
-    tag: 'Public & Urban Intelligence',
+    name: 'Spatial planning',
+    tag: 'Public and urban intelligence',
     summary:
-      'Evidence-based support for urban and regional planning — zoning, infrastructure, population, land-use change. The spatial evidence base your planners can defend.',
-    hook: ['Plan with evidence —', 'not assumptions about your region.'],
+      'Evidence-based support for urban and regional planning, zoning, infrastructure, population, land-use change. The spatial evidence base your planners can defend.',
+    hook: ['Plan with evidence,', 'not assumptions about your region.'],
     lede: 'Evidence-based support for urban and regional planning decisions, integrating zoning, infrastructure, population and land-use change into models your stakeholders can defend.',
     prose: [
       'Plans fail when they collide with the territory. Population estimates are stale. Infrastructure inventories are partial. Land-use shifts faster than the master plan refreshes. The result is policy that looks elegant on paper and falls over in execution.',
-      'We replace assumptions with measurements. Satellite-derived built-up extent, population modelling, infrastructure mapping and land-use change detection are integrated into a planning evidence base — so the recommendations that get tabled are the ones the data can support, and the ones it cannot are flagged before they become political liabilities.',
+      'We replace assumptions with measurements. Satellite-derived built-up extent, population modelling, infrastructure mapping and land-use change detection are integrated into a planning evidence base, so the recommendations that get tabled are the ones the data can support, and the ones it cannot are flagged before they become political liabilities.',
     ],
     delivers: [
       'Zoning compliance and conflict analysis against the current plan',
       'Infrastructure inventory and accessibility modelling (roads, services, utilities)',
       'Gridded population distribution and growth projections',
-      'Land-use change time-series — 5, 10 and 20-year retrospectives',
+      'Land-use change time-series, 5, 10 and 20-year retrospectives',
       'Stakeholder-ready map packs and policy-brief documentation',
     ],
     faq: [
@@ -220,7 +220,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'Can outputs be used in public consultation?',
-        'Yes — visual deliverables are formatted for both technical review and public-facing presentation.',
+        'Yes, visual deliverables are formatted for both technical review and public-facing presentation.',
       ],
       [
         'What scales do you work at?',
@@ -240,22 +240,22 @@ export const SERVICES: ServicePage[] = [
   {
     num: '06',
     slug: 'satellite-imagery',
-    name: 'High-Resolution Satellite Imagery',
-    tag: 'Imagery Acquisition & Processing',
+    name: 'High-resolution satellite imagery',
+    tag: 'Imagery acquisition and processing',
     summary:
-      "Sub-metre imagery from the world's leading providers — tasking, archival retrieval and time-series compilation, processed to your spec, analysis-ready not raw.",
+      "Sub-metre imagery from the world's leading providers, tasking, archival retrieval and time-series compilation, processed to your spec, analysis-ready not raw.",
     hook: ['Sub-metre imagery.', 'Tasked, processed, delivered.'],
-    lede: 'Direct access to the world’s leading satellite providers — handled end-to-end. You define the area of interest, we manage the rest.',
+    lede: 'Direct access to the world’s leading satellite providers, handled end-to-end. You define the area of interest, we manage the rest.',
     prose: [
       'Sourcing satellite imagery is a procurement problem disguised as a technical one. Different providers, different licensing terms, different processing requirements, different formats. Most organisations either over-pay through resellers, or burn weeks of internal time learning a market they will not buy from again.',
-      'We sit between you and the constellation. Tasking, archival retrieval and time-series compilation are negotiated, processed and delivered to your spec — imagery that is analysis-ready, not raw, at competitive pricing because we know the market and bring scale.',
+      'We sit between you and the constellation. Tasking, archival retrieval and time-series compilation are negotiated, processed and delivered to your spec, imagery that is analysis-ready, not raw, at competitive pricing because we know the market and bring scale.',
     ],
     delivers: [
       'Newly-tasked imagery from sub-metre commercial providers',
       'Archival pulls from open and commercial archives, processed to consistent specification',
       'Time-series stacks aligned, co-registered and cloud-masked',
       'Cloud-optimised GeoTIFFs (COGs), JP2 or provider-native formats',
-      'Licensing handled — you receive imagery cleared for your stated use case',
+      'Licensing handled, you receive imagery cleared for your stated use case',
     ],
     faq: [
       [
@@ -264,7 +264,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'What is the highest resolution available?',
-        '30 cm pan-sharpened from Maxar WorldView-3 — the highest commercially available outside government channels.',
+        '30 cm pan-sharpened from Maxar WorldView-3, the highest commercially available outside government channels.',
       ],
       [
         'How quickly can imagery be tasked?',
@@ -288,27 +288,27 @@ export const SERVICES: ServicePage[] = [
   {
     num: '07',
     slug: 'analysis-ready-data',
-    name: 'Analysis-Ready Data',
-    tag: 'Geospatial Data Engineering',
+    name: 'Analysis-ready data',
+    tag: 'Geospatial data engineering',
     summary:
-      'Pre-processed, radiometrically corrected, atmospherically calibrated datasets — ready for immediate integration into your analytical workflows. Skip the pipeline.',
+      'Pre-processed, radiometrically corrected, atmospherically calibrated datasets, ready for immediate integration into your analytical workflows. Skip the pipeline.',
     hook: ['Skip the pipeline.', 'Start with the answer.'],
-    lede: 'Pre-processed, radiometrically corrected and atmospherically calibrated datasets — delivered ready for immediate integration into your analytical workflows.',
+    lede: 'Pre-processed, radiometrically corrected and atmospherically calibrated datasets, delivered ready for immediate integration into your analytical workflows.',
     prose: [
-      'Raw satellite data is a long way from a useful answer. Atmospheric correction, cloud masking, co-registration, mosaicking, format normalisation — each step is straightforward, and collectively they consume the majority of every in-house geospatial team’s capacity.',
-      'We do that work once, on infrastructure built for it, and hand you the output. Your team picks up at "what does it mean?" instead of "how do we process this?" — multiplying the value of the analysts you already employ.',
+      'Raw satellite data is a long way from a useful answer. Atmospheric correction, cloud masking, co-registration, mosaicking, format normalisation, each step is straightforward, and collectively they consume the majority of every in-house geospatial team’s capacity.',
+      'We do that work once, on infrastructure built for it, and hand you the output. Your team picks up at "what does it mean?" instead of "how do we process this?", multiplying the value of the analysts you already employ.',
     ],
     delivers: [
       'Atmospherically corrected, cloud-masked, co-registered imagery stacks',
       'STAC catalogue access for programmatic discovery and retrieval',
       'Cloud-optimised GeoTIFFs (COGs) and zarr packages for cloud-native workflows',
       'Time-aligned multi-sensor fusion (e.g. Sentinel-1 + Sentinel-2 stacks)',
-      'On-premise install or hosted cloud API — whichever your security posture requires',
+      'On-premise install or hosted cloud API, whichever your security posture requires',
     ],
     faq: [
       [
         'What formats do you support?',
-        'COG, JP2, Zarr, NetCDF, HDF5, GeoJSON, Shapefile, GeoPackage — standard plus most provider-native formats.',
+        'COG, JP2, Zarr, NetCDF, HDF5, GeoJSON, Shapefile, GeoPackage, standard plus most provider-native formats.',
       ],
       [
         'Is this hosted or do we receive files?',
@@ -320,7 +320,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'Can you integrate proprietary or government data?',
-        'Yes — provided licensing permits. We have processed sensitive geospatial datasets under NDA before.',
+        'Yes, provided licensing permits. We have processed sensitive geospatial datasets under NDA before.',
       ],
     ],
     kpi: [
@@ -333,17 +333,17 @@ export const SERVICES: ServicePage[] = [
     num: '08',
     slug: 'geoint',
     name: 'GEOINT',
-    tag: 'Defence, Security & Strategic Operations',
+    tag: 'Defence, security and strategic operations',
     summary:
-      'Geospatial intelligence products integrating imagery, human-geography and signals analysis — structured outputs for situational awareness, threat assessment and operational planning.',
+      'Geospatial intelligence products integrating imagery, human-geography and signals analysis, structured outputs for situational awareness, threat assessment and operational planning.',
     hook: ['Decision-grade intelligence', 'for situations that do not allow guesswork.'],
     lede: 'Geospatial intelligence products that integrate imagery, human-geography and signals data into structured outputs for situational awareness, threat assessment and operational planning.',
     prose: [
-      'GEOINT is not GIS with a serious cover. It is an analytical discipline — fusing imagery, OSINT, human terrain and signals into a coherent picture, structured for the decision the consumer actually has to make. The difference between intelligence and a slide deck is in how the question was framed.',
-      'We work with security, defence and strategic-operations clients who need the discipline applied to African operating environments. Engagements are scoped tightly, documented to standard, delivered under NDA, and built around the operational tempo of the consumer — not the comfort of the analyst.',
+      'GEOINT is not GIS with a serious cover. It is an analytical discipline, fusing imagery, OSINT, human terrain and signals into a coherent picture, structured for the decision the consumer actually has to make. The difference between intelligence and a slide deck is in how the question was framed.',
+      'We work with security, defence and strategic-operations clients who need the discipline applied to African operating environments. Engagements are scoped tightly, documented to standard, delivered under NDA, and built around the operational tempo of the consumer, not the comfort of the analyst.',
     ],
     delivers: [
-      'Structured intelligence briefs — area study, target package, situation report formats',
+      'Structured intelligence briefs, area study, target package, situation report formats',
       'Imagery interpretation and pattern-of-life analysis',
       'OSINT fusion (open-source media, social, public records) cross-referenced spatially',
       'Threat overlays, route analysis and operational planning support layers',
@@ -364,7 +364,7 @@ export const SERVICES: ServicePage[] = [
       ],
       [
         'Can you support live operations?',
-        'Yes — we provide on-call analytical support for active engagements, structured around the client’s operational tempo.',
+        'Yes, we provide on-call analytical support for active engagements, structured around the client’s operational tempo.',
       ],
     ],
     kpi: [
